@@ -1,0 +1,37 @@
+                    LOGIN
+                      │
+                      ▼
+              Frontend sends
+            email + password
+                      │
+                      ▼
+               Express API
+                      │
+                      ▼
+              Mongoose User.findOne()
+                      │
+             ┌────────┴────────┐
+             │                 │
+          No user           User found
+             │                 │
+             ▼                 ▼
+          Error          MongoDB returns
+                         user document
+                              │
+                              ▼
+                         user._id
+                              │
+                              ▼
+                       Frontend receives
+                          userId
+                              │
+                              ▼
+                    localStorage.setItem()
+                              │
+                              ▼
+             Every subsequent API request
+                    sends userId
+                              │
+                              ▼
+                    Backend queries MongoDB
+                    using that userId
