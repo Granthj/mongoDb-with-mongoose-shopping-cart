@@ -1,0 +1,18 @@
+.cancel-order-btn {
+    padding: 10px 16px;
+    background: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.cancel-order-btn:hover {
+    background: #b91c1c;
+}
+
+.cancel-order-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
